@@ -1,4 +1,4 @@
-# Reto-DOM-1-JS-
+# Reto-DOM-1-JS
  Reto DOM 1 JS - Java Sofka - Cantera 2 - UY 
 
 1. Crear 3 temas de colores para toda su hoja de vida y permitir cambiar dichos temas por medio de alguna serie de botones o como usted lo crea pertinente, lo importante es poder hacer que su hoja de vida tenga 3 temas de colores en el cual el usuario pueda seleccionar qué tema escoger
