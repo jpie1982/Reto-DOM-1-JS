@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    background-image: radial-gradient(#c657d8 0.5px, transparent 0.5px), radial-gradient(#c657d8 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    /*min-height: 100vh;*/
+
+}
+/* NAVEGACION ------------------- Menu */
+.nav{
+    background: #203d89;
+    height: 80px;
+    color: #7593e4;
+    min-height: 50vh;
+}
+.nav_container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.nav_menu{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.nav_item{
+    color: #fff;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav_item::after{
+    content: "";
+    display: block;
+    background: #33b1ea;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+
+}
+
+.nav_item:hover{
+    --clippy:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* NAVEGACION ------------------- Botones*/
+.botones button{
+    
+    max-width:  150px;
+    padding: 5px;
+}
+
+
+
+/* SECCION 1 - SOBRE MI ---------------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+  }
+.cara img{
+    width:20em;
+    height: 20em;
+    border-radius: 50%;
+    
+   
+}
+.info_cara {
+    font-size: 80%;
+    font-style: italic;
+    padding: 20px 0px;
+}
+
+
+/* SECCION 1 - SOBRE MI ---------------- */
+.uno{
+  
+    background-color: fff;
+    margin: 20px;
+}
+
+
+/* SECCION 2 - PORTFOLIO ----------------- */
+.dos{
+    background-color: fff;
+    margin: 20px;
+    display: block;
+}
+ul{
+   display: flex; 
+   padding: 10px 10px;
+}
+.social{
+    width: 20%;
+    height: 20%;    
+}
+li{
+    display: inline;
+    text-align: center;
+    
+}
+
+/* SECCION 3 - CONTACTO ------------------ */
+/* FORM */
+.tres{
+    margin: 20px;
+    padding: 20px 0px;
+}
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+.titulo{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+.parrafo{
+    text-align:left;
+}
+.form_container{
+    margin-top: 2em;
+    display: grid;
+    gap: 2px;
+
+}
+input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 15px;
+    padding: 10px 10px;
+    border: 1px solid grey ;   
+    font-family: 'Segoe UI';
+}
+textarea{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 15px;
+    padding: 10px 10px;
+    border: 1px solid grey ;
+    font-family: 'Segoe UI';
+}
+.btn_enviar{
+    background-color: #323233;
+    color: #fff;
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+}
+
+
+/* FOOTER ---------------------------------------------------------------------------------- */
+footer{
+ padding: 10px 0px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 720px) {
+    /* los cambios se reflejan en una pantalla con un ancho de 720px ye inferior */
+  }
+
+
+/*-------------------------------*/
+
+
+/* SECCION 4 - DAtos ------------------------------------------------------------------------- */
+
+  .acordeon {
+    
+    width: 800px;
+    margin: 90px auto;
+    color: black;
+    background-color: white;
+    padding: 30px 30px;
+  }
+  
+  .acordeon .container {
+    position: relative;
+    margin: 10px 10px;
+    
+  }
+  
+  .acordeon .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .acordeon .label::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+  
+  .acordeon .content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 15px;
+    text-align: justify;
+    width: 580px;
+    overflow: hidden;
+    transition: 0.5s;
+    
+  }
+  
+  .acordeon hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+  }
+  
+  .acordeon .container.active .content {
+    height: 250px;
+  }
+  
+  .acordeon .container.active .label::before {
+    content: '-';
+    font-size: 15px;
+  }
